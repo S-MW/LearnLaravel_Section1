@@ -9,7 +9,11 @@ use App\Models\Post;
 class moveToPage extends Controller
 {
 
-    
+    public function home()
+    {
+        return view('home');
+    }
+
     public function about()
     {  // echo 'The user is : ' . $id;
        // $tester [] = ['name' => 'saad', 'age' =>'22' , 'sex'=>'male' ];
@@ -21,6 +25,8 @@ class moveToPage extends Controller
     {
         return view('contact');
     }
+
+// --------------------------------------------------
 
     public function result(Request $request)
     {

@@ -1,13 +1,34 @@
 <!DOCTYPE html>
-<html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>layouts</title>
-    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.0/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-KyZXEAg3QhqLMpG8r+8fhAXLRk2vvoC2f3B09zVXn8CA5QIVfZOJ3BCsw2P0p/We" crossorigin="anonymous">
-</head>
-<body>
-        @yield('content')
-</body>
-</html>
+    <html lang="en">
+        <head>
+            <meta charset="UTF-8">
+            <meta http-equiv="X-UA-Compatible" content="IE=edge">
+            <meta name="viewport" content="width=device-width, initial-scale=1.0">
+            <title>layouts</title>
+            <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.0/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-KyZXEAg3QhqLMpG8r+8fhAXLRk2vvoC2f3B09zVXn8CA5QIVfZOJ3BCsw2P0p/We" crossorigin="anonymous">
+        </head>
+        <body>
+            <!-- Nav Bar -->
+            <div class="contener">
+                <div class="row">
+                    <div class="col-2 bg-success text-center ">
+                        <a class="text-dark" style="text-decoration: none; " href="{{route('home')}} ">
+                            <h1>Home</h1>
+                        </a>
+                    </div>
+                    <div class="col-2 bg-danger text-center ">
+                        <a class="text-dark" style="text-decoration: none; " href="{{route('about')}} ">
+                            <h1>About</h1>
+                        </a>
+                    </div>      
+                    <div class="col-2 bg-info text-center ">
+                        <a class="text-dark" style="text-decoration: none; " href="{{route('contact')}} ">
+                            <h1>Contact</h1>
+                        </a>
+                    </div>
+                </div>
+            </div>
+            @yield('content')
+
+        </body>
+    </html>

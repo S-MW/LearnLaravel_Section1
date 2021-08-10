@@ -17,7 +17,7 @@ Route::get('/', function () {
     return view('welcome');
 });
 
-Route::get('home',[Controllers\moveToPage::class , 'home'])->name('home');
+Route::get('/home',[Controllers\moveToPage::class , 'home'])->name('home');
 Route::get('/about',[Controllers\moveToPage::class , 'about'])->name('about');
 route::get('/contact',[Controllers\moveToPage::class , 'contact'] )->name('contact');
 
