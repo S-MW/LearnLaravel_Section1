@@ -30,7 +30,7 @@
                 @endif
 
                     <div class="row">
-                        <div class="col-6 bg-success text-center text-light">
+                        <div class="col-6 bg-warning text-light">
                             @yield('content')
                         </div>
                         <div class="col-6 bg-primary text-center text-light">

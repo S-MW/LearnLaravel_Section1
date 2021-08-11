@@ -3,7 +3,6 @@
 namespace App\Http\Requests;
 
 use Illuminate\Foundation\Http\FormRequest;
-
 class ContactRequest extends FormRequest
 {
     /**
@@ -24,22 +23,23 @@ class ContactRequest extends FormRequest
     public function rules()
     {
         return [
-            'name'=>['required','email'],
-            'email'=>'required|email'
+            'name'=>['required'],
+            'email'=>['required', 'unique:Contacts,email'],
         ];
     }
 
     public function messages()
     {
         return[
-            'name.required'=>'ttttttttttttt',
+            'name.required'=>'You Have to enter(s) your name !!!',
         ];
     }
 
     public function attributes()
     {
         return[
-            'email'=>"E-Mail"
+            'email'=>"E-Mail",
+            'name'=>'NNNAAAMMMEEE'
         ];
     }
 }
