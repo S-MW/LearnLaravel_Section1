@@ -19,6 +19,8 @@ Route::get('/', function () {
 
 Route::get('/home',[Controllers\moveToPage::class , 'home'])->name('home');
 Route::get('/about',[Controllers\moveToPage::class , 'about'])->name('about');
-route::get('/contact',[Controllers\moveToPage::class , 'contact'] )->name('contact');
+Route::get('/contact',[Controllers\moveToPage::class , 'contact'] )->name('contact');
 
-Route::get('/result',[Controllers\moveToPage::class , 'result'] )->name('result');
+Route::post('/submit',[Controllers\moveToPage::class ,'submit'])->name('submit');
+
+Route::post('/result',[Controllers\moveToPage::class , 'result'] )->name('result');

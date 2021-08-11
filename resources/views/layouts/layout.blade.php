@@ -6,29 +6,41 @@
             <meta name="viewport" content="width=device-width, initial-scale=1.0">
             <title>layouts</title>
             <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.0/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-KyZXEAg3QhqLMpG8r+8fhAXLRk2vvoC2f3B09zVXn8CA5QIVfZOJ3BCsw2P0p/We" crossorigin="anonymous">
+            <link rel="stylesheet" type="text/css" href="{{ asset('css/apptwo.css') }}" >
+
         </head>
         <body>
             <!-- Nav Bar -->
-            <div class="contener">
-                <div class="row">
-                    <div class="col-2 bg-success text-center ">
-                        <a class="text-dark" style="text-decoration: none; " href="{{route('home')}} ">
-                            <h1>Home</h1>
-                        </a>
-                    </div>
-                    <div class="col-2 bg-danger text-center ">
-                        <a class="text-dark" style="text-decoration: none; " href="{{route('about')}} ">
-                            <h1>About</h1>
-                        </a>
-                    </div>      
-                    <div class="col-2 bg-info text-center ">
-                        <a class="text-dark" style="text-decoration: none; " href="{{route('contact')}} ">
-                            <h1>Contact</h1>
-                        </a>
-                    </div>
-                </div>
-            </div>
-            @yield('content')
+            <nav class="navbar navbar-expand-lg navbar-light bg-dark">
+                    <ul class="col navbar-nav">
+                    <li class="nav-item col-4 text-center">
+                        <a class="nav-link h3 text-secondary" href="{{route('home')}}">Home</a>
+                    </li>
+                    <li class="nav-item col-4 text-center">
+                        <a class="nav-link h3 text-secondary" href="{{route('about')}}">About</a>
+                    </li>
+                    <li class="nav-item col-4 text-center">
+                        <a class="nav-link h3 text-secondary" href="{{route('contact')}}">Contact</a>
+                    </li>
+                    </ul>
+            </nav>
+            <div class="container-fluid">
+                @if(Request::is('home'))
+                    @include('layouts.jumbotron')
+                @endif
 
+                    <div class="row">
+                        <div class="col-6 bg-success text-center text-light">
+                            @yield('content')
+                        </div>
+                        <div class="col-6 bg-primary text-center text-light">
+                            <h1>Side Bar</h1>
+                            <p>This is a side bar</p>
+                        </div>
+                    </div>
+            </div>
+            <footer id="footer123" class="text-center">
+                <p> copy right &copy; by ... </p>
+            </footer>
         </body>
     </html>
