@@ -13,11 +13,11 @@ use App\Http\Controllers;
 |
 */
 
-Route::get('/', function () {
-    return view('welcome');
-});
+// Route::get('/', function () {
+//     return view('welcome');
+// });
 
-Route::get('/home',[Controllers\moveToPage::class , 'home'])->name('home');
+Route::get('/',[Controllers\moveToPage::class , 'home'])->name('home');
 Route::get('/about',[Controllers\moveToPage::class , 'about'])->name('about');
 Route::get('/contact',[Controllers\moveToPage::class , 'contact'] )->name('contact');
 Route::get('/SeeMessages',[Controllers\moveToPage::class , 'SeeMessages'] )->name('SeeMessages');

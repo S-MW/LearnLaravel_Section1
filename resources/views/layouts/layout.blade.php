@@ -14,7 +14,7 @@
             <nav class="navbar navbar-expand-lg navbar-light bg-info">
                     <ul class="col navbar-nav ">
                     <li class="nav-item col-2 text-center ">
-                        <a class="nav-link h3 {{ Request::is('home') ? 'active' : ''}}" href="{{route('home')}}">Home</a>
+                        <a class="nav-link h3 {{ Request::is('/') ? 'active' : ''}}" href="{{route('home')}}">Home</a>
                     </li>
                     <li class="nav-item col-2 text-center">
                         <a class="nav-link h3 {{ Request::is('about') ? 'active' : ''}} " href="{{route('about')}}">About</a>
