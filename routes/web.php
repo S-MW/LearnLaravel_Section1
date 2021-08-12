@@ -20,7 +20,7 @@ Route::get('/', function () {
 Route::get('/home',[Controllers\moveToPage::class , 'home'])->name('home');
 Route::get('/about',[Controllers\moveToPage::class , 'about'])->name('about');
 Route::get('/contact',[Controllers\moveToPage::class , 'contact'] )->name('contact');
+Route::get('/SeeMessages',[Controllers\moveToPage::class , 'SeeMessages'] )->name('SeeMessages');
+
 
 Route::post('/submit',[Controllers\moveToPage::class ,'submit'])->name('submit');
-
-Route::post('/result',[Controllers\moveToPage::class , 'result'] )->name('result');

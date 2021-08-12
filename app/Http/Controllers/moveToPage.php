@@ -25,6 +25,11 @@ class moveToPage extends Controller
     {
         return view('contact');
     }
+    public function SeeMessages()
+    {
+        $AllMessages = Contact::all();
+        return view('SeeMessages',compact('AllMessages'));
+    }
 
     public function submit(ContactRequest $request)
     {
